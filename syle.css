@@ -1,0 +1,62 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --mainWhite: #f2f3f7;
+  --buttonWhite: -2px -2px 5px rgba(255, 255, 255, 1),
+                  3px 3px 5px rgba(0,0,0,0.07);
+  --buttonWhiteActive: inset -2px -2px 5px rgba(255, 255, 255, 0.05),
+                       inset 3px 3px 5px rgba(0, 0, 0, 0.07);
+  --iconWhiteVer: #c2c2c2;
+  --mainDark: #222;
+
+  --buttonDark: inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+                inset 3px 3px 5px rgba(255, 255, 255, 0.7);
+  --buttonDarkActive: -2px -2px -2px 5px rgba(0, 0, 0, 0.5),
+                       3px 3px 5px rgba(255,255,255,0.7);
+
+  --iconDarkVer: #3e3e3e;
+
+  --iconDarkVerActive: 0 0 10px rgb(231, 238, 0.5),
+                       0 0 10px rgb(255,255,255);
+
+  --iconDarkLine: 0 0 10px rgba(235, 235, 235, 0.5),
+                  0 0 20px rgba(235, 235, 235, 0.5),
+                  0 0 30px rgba(235, 235, 235, 0.5),
+                  inset 0 0 10px rgba(235, 235, 235, 0.5);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+.nuemorphism{
+  background: var(--mainWhite);
+}
+.nuemorphism .switch{
+  background: var(--mainWhite);
+  box-shadow: var(--buttonWhite)
+}
+.nuemorphism .switch input[type="checked"] ~ .icon_box{
+  background: var(--mainWhite);
+  box-shadow: var(--buttonWhite);
+}
+.nuemorphism .switch input[type="checked"] ~ .icon_box i{
+  color: var(--iconWhiteVer);
+}
+.nuemorphism .switch input[type="checked"]:checked ~ .icon_box{
+  box-shadow: var(--buttonWhiteActive);
+}
+.dark{
+  background: var(--mainDark);
+}
+.dark .switch{
+  background: var(--mainDark);
+  box-shadow: var(--buttonDark);
+}
+.dark .switch input[type="checked"]
